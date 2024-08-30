@@ -43,8 +43,8 @@ const FrancescoPortfolio = () => {
   return (
     <div className="min-h-screen bg-black text-gray-100">
       <nav className="bg-black p-4 sticky top-0 z-10 shadow-md">
-        <div className="max-w-6xl mx-auto flex justify-between items-center">
-          <div className="flex items-center space-x-2">
+        <div className="max-w-6xl mx-auto flex flex-col sm:flex-row justify-between items-center">
+          <div className="flex items-center space-x-2 mb-4 sm:mb-0">
             <div className="w-10 h-10 bg-gradient-to-br from-gray-700 to-gray-900 rounded-full flex items-center justify-center text-white font-bold text-xl shadow-inner">
               <img src="https://github.com/francedot.png" alt="Francesco Bonacci" className="w-full h-full rounded-full" />
             </div>
@@ -57,22 +57,22 @@ const FrancescoPortfolio = () => {
           </div>
         </div>
       </nav>
-      <main className="max-w-6xl mx-auto mt-8 pb-16 px-4">
+      <main className="max-w-6xl mx-auto mt-8 pb-16 px-4 sm:px-6"> {/* Increased padding */}
         <div className="flex flex-col items-center justify-center space-y-8 max-w-4xl mx-auto">
-          <div className="text-center flex flex-col items-center">
-            <h2 className="text-xl text-gray-400 mb-2">SOFTWARE ENGINEER ↔ ML ENGINEER</h2>
-            <h1 className="text-5xl font-bold mb-4 bg-gradient-to-r from-gray-100 to-gray-400 text-transparent bg-clip-text">Francesco Bonacci</h1>
-            <p className="text-gray-400 mb-6 max-w-2xl leading-relaxed text-justify">
+          <div className="text-center flex flex-col items-center w-full"> {/* Added w-full */}
+            <h2 className="text-lg sm:text-xl text-gray-400 mb-2">SOFTWARE ENGINEER ↔ ML ENGINEER</h2>
+            <h1 className="text-3xl sm:text-5xl font-bold mb-4 bg-gradient-to-r from-gray-100 to-gray-400 text-transparent bg-clip-text">Francesco Bonacci</h1>
+            <p className="text-gray-400 mb-6 max-w-2xl leading-relaxed text-sm sm:text-base text-justify">
               <strong>Francesco</strong> here! I'm a SWE at Microsoft. Here you'll also find a mix of my OSS work and interests.
               I've worn several hats in my career, starting as a Windows Phone developer (remember that?), then moving on to Xamarin, and then all about .NET and Azure.
               Since joining Microsoft in 2019, I've worked with great people across 4 country subsidiaries and 3 different divisions.
               Fast forward to today, I'm now part of Microsoft AI, where I train models to improve experiences across Bing, Edge and Windows
             </p>
-            <h3 className="text-2xl font-semibold mb-4 mt-4 text-center bg-gradient-to-r from-gray-100 to-gray-400 text-transparent bg-clip-text">Highlights</h3>
+            <h3 className="text-xl sm:text-2xl font-semibold mb-4 mt-4 text-center bg-gradient-to-r from-gray-100 to-gray-400 text-transparent bg-clip-text">Highlights</h3>
             <div className="w-full flex justify-center">
               <ProjectCarousel projects={gridProjects.slice(0, 4)} />
             </div>
-            <h3 className="text-2xl font-semibold mt-12 mb-4 text-center bg-gradient-to-r from-gray-100 to-gray-400 text-transparent bg-clip-text">More Projects</h3>
+            <h3 className="text-xl sm:text-2xl font-semibold mt-12 mb-4 text-center bg-gradient-to-r from-gray-100 to-gray-400 text-transparent bg-clip-text">More Projects</h3>
             <div className="w-full">
               <ProjectGrid projects={gridProjects} />
             </div>
