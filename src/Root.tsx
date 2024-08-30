@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { Book, Code, Database, Github } from 'lucide-react';
+import React from 'react';
+import { Github } from 'lucide-react';
 import ProjectCarousel from './ProjectCarousel';
 import ProjectGrid from './ProjectGrid';
 
